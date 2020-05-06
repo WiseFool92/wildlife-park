@@ -1,27 +1,28 @@
 using System;
 using System.Collections.Generic;
 
+
 namespace WildLife.Tracker
 {
-  public class Zoo
+  public class Animal
   {
+    private string _species;
+    private string _age;
 
-    private string _type;
-    private string _gender;
-    private string _name;
-    public Animal(string type, string gender, string name)
+    public Animal(string species, string age)
     {
-      _type = type;
-      _gender = gender;
-      _name = name;
+      _species = species;
+      _age = age;
     }
-  public static List<string> fluffyFriends = new List<string> {};
-  
-    public static void AddFluffyFriend()
+
+    public string GetSpecies()
     {
-      Console.WriteLine("Enter the type of animal we're adding:");
-      Animal.type = Console.ReadLine();
-      
+      return _species;
+    }
+
+    public string GetAge()
+    {
+      return _age;
     }
   }
 }
